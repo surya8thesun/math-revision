@@ -13,6 +13,7 @@ let nums = [];
 let query;
 document.querySelector("form").addEventListener("submit", (event) => {
   nums = [];
+  objs = [];
   event.preventDefault();
   for (
     let i = document.getElementById("start").value;
