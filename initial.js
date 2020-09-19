@@ -1,4 +1,6 @@
 // jshint esversion:6
+const startValue = document.getElementById("start").value;
+const endValue = document.getElementById("end").value;
 let objs = [];
 class createTableObj {
   constructor(num1, num2) {
@@ -30,7 +32,6 @@ document.querySelector("form").addEventListener("submit", (event) => {
   document.querySelector("p").textContent = `${query.result}`;
 });
 document.querySelector("button").addEventListener("click", (event) => {
-  p.innerHTML = "";
   let arr = [];
   objs.map((obj) => {
     if (obj.result === query.result) {
@@ -40,7 +41,8 @@ document.querySelector("button").addEventListener("click", (event) => {
   arr.map((thing) => {
     document.querySelector("p").innerHTML += `<br>`;
     document.querySelector("p").innerHTML =
-      document.querySelector("p").innerHTML + `${thing.first} ${thing.second}`;
+      document.querySelector("p").innerHTML +
+      `${thing.first} ${thing.second}`;
   });
   arr = [];
 });
