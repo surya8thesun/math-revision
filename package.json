@@ -1,0 +1,20 @@
+{
+  "name": "maths-revision",
+  "version": "1.0.0",
+  "description": "My maths revision",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start-dev-server": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "webpack-dev-server": "^3.11.0"
+  }
+}
