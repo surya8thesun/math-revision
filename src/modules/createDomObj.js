@@ -22,8 +22,9 @@ class createDomObj {
     });
     arr.map((thing) => {
       p.innerHTML += `<br>`;
-      p.innerHTML = p.innerHTML + `${thing.first} ${thing.second}`;
+      p.innerHTML = p.innerHTML + `${thing.first} X ${thing.second}`;
     });
+    p.append(document.createElement("hr"));
     arr = [];
   }
   createCheck(query) {
@@ -62,13 +63,14 @@ class createDomObj {
     } else {
       this.createCheck(q);
     }
-    document.body.append(p);
+    document.body.querySelector("div").append(p);
   }
 }
 document.querySelector("form").addEventListener("submit", (event) => {
   count++;
 });
-document.querySelector("button").addEventListener("click", (event) => {
+document.querySelector("form > button").addEventListener("click", (event) => {
+  event.preventDefault();
   count++;
 });
 export { createDomObj, q };
